@@ -1,0 +1,91 @@
+﻿@model TravelLog.Models.Record
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Record</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BusNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BusNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FromDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FromDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ToDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ToDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartingKm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartingKm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClosingKm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClosingKm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalKm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalKm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AdvanceAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdvanceAmount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Expenses)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BalanceAmount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BalanceAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BalanceAmount)
+        </dd>
+    </dl>
+
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+        <a asp-action="Index">Back to List</a>
+    </div>
+</div>
+ 

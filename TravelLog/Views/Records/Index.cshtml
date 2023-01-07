@@ -1,0 +1,95 @@
+﻿@model IEnumerable<TravelLog.Models.Record>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.BusNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FromDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ToDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StartingKm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClosingKm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalKm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AdvanceAmount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Expenses)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BalanceAmount)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BusNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FromDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ToDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartingKm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClosingKm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalKm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdvanceAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Expenses)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BalanceAmount)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id" onclick="return confirm('Are you sure you want to delete this record?');">Delete</a>
+            </td>
+            @*<td>
+            <a asp-action="Edit" asp-route-id="@item.Id">
+                <input type="submit" value="Edit" class="btn btn-danger" />
+            </a> |
+            <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+            <a asp-action="Delete" asp-route-id="@item.Id">
+                <input type="submit" value="Delete" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this record?');" />
+            </a>
+        </td>*@
+        </tr>
+        }
+    </tbody>
+</table>
+

@@ -1,0 +1,45 @@
+﻿@model TravelLog.Models.Record
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div>
+        <label asp-for="BusNo">Bus No:</label>
+        <input asp-for="BusNo" />
+        <span asp-validation-for="BusNo"></span>
+    </div>
+    <div>
+        <label asp-for="FromDate">From Date:</label>
+        <input asp-for="FromDate" />
+        <span asp-validation-for="FromDate"></span>
+    </div>
+    <div>
+        <label asp-for="ToDate">To Date:</label>
+        <input asp-for="ToDate" />
+        <span asp-validation-for="ToDate"></span>
+    </div>
+    <div>
+        <label asp-for="StartingKm">Starting Km:</label>
+        <input asp-for="StartingKm" />
+        <span asp-validation-for="StartingKm"></span>
+    </div>
+    <div>
+        <label asp-for="ClosingKm">Closing Km:</label>
+        <input asp-for="ClosingKm" />
+        <span asp-validation-for="ClosingKm"></span>
+    </div>
+    <div>
+        <label asp-for="AdvanceAmount">Advance Amount:</label>
+        <input asp-for="AdvanceAmount" />
+        <span asp-validation-for="AdvanceAmount"></span>
+    </div>
+    <div>
+        <label asp-for="Expenses">Expenses:</label>
+        <input asp-for="Expenses" />
+        <span asp-validation-for="Expenses"></span>
+    </div>
+    <div>
+       <input type="submit" value="Save" class="btn btn-default" /> |
+</div> 
+
+</form>
+<a asp-action="Index">Back to List</a>
